@@ -25,3 +25,15 @@ Fri, Mar 21, 2025  9:46:38 AM:
  tests:  4|1
 total_score: 50/70
 c3355ea
+Fri, Mar 21, 2025 10:28:51 AM: 
+ exercises.c | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:118:17: error: implicit declaration of function 'crearPila' [-Werror=implicit-function-declaration]
+    char* pila = crearPila();
+                 ^~~~~~~~~
+exercises.c:118:17: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+cc1.exe: all warnings being treated as errors
+Compilation failed
+723d93e
