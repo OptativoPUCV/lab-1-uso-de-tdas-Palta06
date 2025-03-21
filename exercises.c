@@ -128,6 +128,7 @@ int parentesisBalanceados(char *cadena) {
         } 
          else if (actual == ')' || actual == ']' || actual == '}') {
             if (top == -1) {
+               free(pila);
                return 0;
             }
             char tope = pila[top];
@@ -135,9 +136,12 @@ int parentesisBalanceados(char *cadena) {
                top--;
                pila = (char *)realloc(pila, (top + 1) * sizeof(char));
             }
-            else return 0;
+            else{
+               free(pila);
+               return 0;
+            }
          }
       }
-   return 1;
+   return (top(pila) == NULL);
 }
 
