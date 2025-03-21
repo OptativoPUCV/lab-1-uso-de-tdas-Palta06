@@ -13,3 +13,9 @@ exercises.c:98:17: error: initialization from incompatible pointer type [-Werror
 cc1.exe: all warnings being treated as errors
 Compilation failed
 718f164
+Fri, Mar 21, 2025  9:44:21 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 40/70
+ef1863a
