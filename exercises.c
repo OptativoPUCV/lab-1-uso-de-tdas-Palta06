@@ -122,19 +122,18 @@ int parentesisBalanceados(char *cadena) {
          char actual = cadena[i];
 
       if (actual == '(' || actual == '[' || actual == '{') {
-          prim++;
+            prim++;
             pila = (char *)realloc(pila, (prim + 1) * sizeof(char));
-            pila [prim] = actual;
+            pila[prim] = actual;
         } 
          else if (actual == ')' || actual == ']' || actual == '}') {
             if  (prim == -1) {
                free(pila);
                return 0;
             }
-            char tope = pila [prim];
+            char tope = pila[prim];
             if ((actual == ')' && tope == '(') || (actual == ']' && tope == '[') || (actual == '}' && tope == '{')) {
             prim--;
-               pila = (char *)realloc(pila, (prim + 1) * sizeof(char));
             }
             else{
                free(pila);
@@ -142,6 +141,7 @@ int parentesisBalanceados(char *cadena) {
             }
          }
       }
-   return (top(pila) == NULL);
+   free(pila);
+   return prim == -1 ? 1 : 0;
 }
 
