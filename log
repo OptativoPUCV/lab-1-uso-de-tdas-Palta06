@@ -2,3 +2,14 @@ Fri, Mar 21, 2025  9:42:29 AM:
  tests:  0|5
 total_score: 0/70
 2fc14fb
+Fri, Mar 21, 2025  9:43:34 AM: 
+ exercises.c | 32 ++++++++++++++++++++++++++++++--
+ 1 file changed, 30 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:98:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    Stack* aux = create_stack;
+                 ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+718f164
